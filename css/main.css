@@ -1,0 +1,28 @@
+html,button,input,select,textarea{color:#222}
+html{height:100%;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}
+body{height:100%;font-size:1em;line-height:1.5em;margin:0;padding:0;background-color:#eee}
+a{color:#08c;text-decoration:none}
+a:hover{color:#005580;outline:0;text-decoration:underline}
+a:focus{outline:thin dotted}
+a:active{outline:0}
+h1,h2,h3,h4,h5,h6{margin:0;padding:0;font-weight:400;margin:0;padding:0}
+ul,ol{padding:0;margin:0}
+#title{margin:0;padding:6px;font-size:1.1em;text-align:center;background:rgba(27,161,226,.7)}
+#timetable{padding-bottom:30px}
+#timetable li{padding:10px;list-style:none;margin-top:6px}
+#day,#date{display:inline-block}
+#date:before{content:" - "}
+.modulecode,.moduletitle,.starttime,.endtime{display:block}
+.duration{display:table-cell;vertical-align:middle;text-align:center}
+.info{padding-left:20px;display:table-cell;vertical-align:middle}
+input,button,select,textarea{font-family:inherit;font-size:100%;margin:0;border:1px solid #ccc;display:inline-block;padding:6px 4px;outline:none;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;background:#fff;text-align:center}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+#noclass{text-align:center;margin:0 auto;border:3px dashed #fff}
+.module,.Lecture{background:rgba(164,196,0,.7)}
+.Practical{background:rgba(240,163,10,.7)}
+.Tutorial{background:rgba(229,20,0,.7)}
+.Seminar{background:rgba(244,114,208,.7)}
+@media screen and (max-width:680px) {
+.ctrl{display:none};
+}

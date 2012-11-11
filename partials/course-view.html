@@ -1,0 +1,20 @@
+<ul id="timetable" dcuttswipe>
+  <li ng-show="!showLoader" id="when">
+    <h2 id="day">{{dayname}}</h2>
+    <h4 id="date">({{daydate}})</h4>
+  </li>
+  <li id="noclass" ng-show="!day.events && !showLoader">No classes today!</li>
+  <li ng-show="!showLoader" ng-repeat="event in day.events" class="{{event.type}} group module">
+    <div class="duration">
+      <span class="starttime">{{event.starthours}}:{{event.startmins}}</span>
+      to <span class="endtime">{{event.endhours}}:{{event.endmins}}</span>
+    </div>
+    <div class="info">
+      <span class="modulecode">{{event.modulecode}}</span>
+      <span class="moduletitle" ng-bind-html-unsafe="event.title"></span>
+      <span class="location">Location: {{event.location}}</span>
+    </div>
+  </li>
+</ul>
+<button class="ctrl" ng-click="prev()">Previous</button>
+<button class="ctrl" ng-click="next()">Next</button>
