@@ -1,6 +1,6 @@
 'use strict';
 
-dcutt.controller( 'dcuttViewCtrl', function dcuttViewCtrl( $scope, $location, $routeParams, $http) {
+dcutt.controller( 'dcuttViewCtrl', function( $scope, $location, $routeParams, $http) {
   
   /** 
    * Helper functions for handling dates some devices *cough*iOS*cough*
