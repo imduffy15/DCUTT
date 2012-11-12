@@ -1,164 +1,32 @@
-html,button,input,select,textarea {
-    color: #222;
+html,button,input,select,textarea{color:#222}
+html{height:100%;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}
+body{height:100%;font-size:1em;line-height:1.5em;margin:0;padding:0;background:#eee}
+a{color:#08c;text-decoration:none}
+a:hover{color:#005580;outline:0;text-decoration:underline}
+a:focus{outline:thin dotted}
+a:active{outline:0}
+h1,h2,h3,h4,h5,h6{margin:0;padding:0;font-weight:400}
+ul,ol{padding:0;margin:0}
+#timetable{padding-top:52px;padding-bottom:30px}
+#timetable li{padding:10px;list-style:none;margin:6px 10px 0}
+#day,#date{display:inline-block}
+#date:before{content:" - "}
+.modulecode,.location{display:block;font-size:.8em}
+.moduletitle,.starttime,.endtime{display:block}
+.starttime:after{display:block;content:"|"}
+.duration{display:table-cell;vertical-align:middle;text-align:center}
+.info{padding-left:20px;display:table-cell;vertical-align:middle}
+input,button,select,textarea{font-family:inherit;font-size:100%;margin:0;border:1px solid #ccc;display:inline-block;padding:6px 4px;outline:none;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;background:#fff;text-align:center}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+#noclass{text-align:center;border:3px solid#DADADA;margin:0 10px;background:rgba(189,189,189,.19)}
+.module,.Lecture{background:#fcb1b1;border:1px solid #8a3333}
+.Practical{background:#64ecff;border:1px solid #26646d}
+.Tutorial{background:#fce7b1;border:1px solid #887136}
+.Seminar{background:rgba(244,114,208,.7)}
+.visuallyhidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}
+.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}
+#when{padding:10px;width:100%;-webkit-box-shadow:0 0 8px rgba(0,0,0,.37);-moz-box-shadow:0 0 8px rgba(0,0,0,.37);box-shadow:0 0 8px rgba(0,0,0,.37);position:fixed;margin:0!important;margin-bottom:20px;border-bottom:1px solid #d8d35a;background:#faf699}
+@media screen and (max-width:680px) {
+.ctrl{display:none}
 }
-
-html {
-    height: 100%;
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-    -webkit-text-size-adjust: 100%;
-}
-
-body {
-    height: 100%;
-    font-size: 1em;
-    line-height: 1.5em;
-    margin: 0;
-    padding: 0;
-    background-color: #eee;
-}
-
-a {
-    color: #08c;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #005580;
-    outline: 0;
-    text-decoration: underline;
-}
-
-a:focus {
-    outline: thin dotted;
-}
-
-a:active {
-    outline: 0;
-}
-
-h1,h2,h3,h4,h5,h6 {
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
-}
-
-ul,ol {
-    padding: 0;
-    margin: 0;
-}
-
-#title {
-    margin: 0;
-    padding: 6px;
-    font-size: 1.1em;
-    text-align: center;
-    background: rgba(27,161,226,.7);
-}
-
-#timetable {
-    padding-bottom: 30px;
-}
-
-#timetable li {
-    padding: 10px;
-    list-style: none;
-    margin: 6px 10px 0px 10px;
-}
-
-#day,#date {
-    display: inline-block;
-}
-
-#date:before {
-    content: " - ";
-}
-
-.modulecode,.location{
-    display: block;
-    font-size:0.8em;
-}
-
-.moduletitle,.starttime,.endtime {
-    display: block;
-}
-
-.duration {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
-
-.info {
-    padding-left: 20px;
-    display: table-cell;
-    vertical-align: middle;
-}
-
-input,button,select,textarea {
-    font-family: inherit;
-    font-size: 100%;
-    margin: 0;
-    border: 1px solid #ccc;
-    display: inline-block;
-    padding: 6px 4px;
-    outline: none;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    background: #fff;
-    text-align: center;
-}
-
-button,html input[type="button"],input[type="reset"],input[type="submit"] {
-    -webkit-appearance: button;
-    cursor: pointer;
-}
-
-button::-moz-focus-inner,input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-}
-
-#noclass {
-    text-align: center;
-	background-color: rgba(189, 189, 189, 0.19);
-	border: 3px solid#DADADA;
-	margin: 0px 10px;
-}
-
-.module,.Lecture {
-    background: #FCB1B1;
-    border: 1px solid #8A3333;
-}
-
-.Practical {
-    background: #64ECFF;
-    border: 1px solid #26646D;
-}
-
-.Tutorial {
-    background: #FCE7B1;
-    border: 1px solid #887136;
-}
-
-.Seminar {
-    background: rgba(244,114,208,.7);
-}
-
-/*GlennMurphy */
-
-#when {
-    background-color: #FAF699;
-    width:100%;
-    -webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.37);
-    -moz-box-shadow: 0px 0px 8px rgba(0,0,0,0.37);
-    box-shadow: 0px 0px 8px rgba(0,0,0,0.37);
-    position:fixed;
-    margin:0px !important;
-    border-bottom: 1px solid #D8D35A;
-}
-
-#topspace{
-	height:52px;
-}
-
