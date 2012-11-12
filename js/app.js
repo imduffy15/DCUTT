@@ -7,9 +7,9 @@ dcutt.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
   $locationProvider.hashPrefix('!');
   $routeProvider.
     when('/', {
-      redirectTo: '/CASE2'
-      //templateUrl: 'partials/prompt.html', 
-      //controller: "CoursePromptCtrl"
+      //redirectTo: '/CASE2'
+      templateUrl: 'partials/prompt.html', 
+      controller: "dcuttPromptCtrl"
   }).
   when('/error', {
       templateUrl: 'partials/error.html'
@@ -19,3 +19,9 @@ dcutt.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: "dcuttViewCtrl"
   });      
 }]);
+
+
+var getTimetable = function() {
+  alert("Hello");
+  return false;
+}
