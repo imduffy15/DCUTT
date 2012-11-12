@@ -44,7 +44,7 @@ dcutt.controller( 'dcuttViewCtrl', function( $scope, $location, $routeParams, $h
   $scope.date = dateToString(new Date());
   var timetable = {}
   
-  $http({method: 'GET', url: 'http://api.dcutt.com/index.php?coursecode=' + $routeParams.coursecode}).
+  $http({method: 'GET', url: 'https://api.dcutt.com/index.php?coursecode=' + $routeParams.coursecode}).
     success(function(data) {
       timetable = data;
       updateEvents();
