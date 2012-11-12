@@ -1,13 +1,13 @@
 'use strict';
 
-dcutt.directive('dcuttswipe', function() {
+dcutt.directive('dcutt-swipe', function() {
   return function( scope, elem, attrs ) {
     $('body').swipeLeft(function() {
-      scope.next();
+      scope.nextDay();
       scope.$apply();
     });
     $('body').swipeRight(function() {
-      scope.prev();
+      scope.prevDay();
       scope.$apply();
     });
   };

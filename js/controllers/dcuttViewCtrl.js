@@ -7,42 +7,41 @@ dcutt.controller( 'dcuttViewCtrl', function( $scope, $location, $routeParams, $h
    * decided to not support yyyy-mm-dd as a valid date
    */
   
-  var date_to_str = function(date) {
+  var dateToString = function(date) {
     function pad(n) {
-            return n < 10 ? '0' + n : n
+      return n < 10 ? '0' + n : n
     }
     return date.getFullYear() + "-" + pad(date.getMonth() + 1) + "-" + pad(date.getDate());
   }
     
-  var str_to_date = function(datestr) {
-    var parts = datestr.split("-");
-    var dt = new Date(
-      parseInt(parts[0], 10),
-      parseInt(parts[1], 10) - 1,
-      parseInt(parts[2], 10)
+  var stringToDate = function(dateString) {
+    var parts = dateString.split("-");
+    return new Date(
+      parts[0],
+      parts[1] - 1,
+      parts[2]
     );
-    return dt;
   }
     
-  var incr_date = function(datestr) {
-    var date = str_to_date(datestr);
+  var getTomorrowsDate = function(datestr) {
+    var date = stringToDate(datestr);
     var date = new Date(date.getTime() + 86400000);
-    return date_to_str(date);
+    return dateToString(date);
   }
     
-  var dec_date = function(datestr) {
-    var date = str_to_date(datestr);
+  var getYesterdaysDate = function(datestr) {
+    var date = stringToDate(datestr);
     var date = new Date(date.getTime() - 86400000);
-    return date_to_str(date);
+    return dateToString(date);
   }
   
-  var day_name = function(datestr) {
+  var getDayName = function(datestr) {
     var name = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-    var date = str_to_date(datestr);
+    var date = stringToDate(datestr);
     return name[date.getDay()];
   }
   
-  $scope.date = date_to_str(new Date());
+  $scope.date = dateToString(new Date());
   var timetable = {}
   
   $http({method: 'GET', url: 'http://api.dcutt.com/index.php?coursecode=' + $routeParams.coursecode}).
@@ -54,22 +53,22 @@ dcutt.controller( 'dcuttViewCtrl', function( $scope, $location, $routeParams, $h
       $location("/");
     });
     
-    var updateEvents = function() {
-      $scope.day = timetable[$scope.date];
-      $scope.daydate = $scope.date;
-      $scope.dayname = day_name($scope.date);
-    }
-    $scope.updateEvents = updateEvents;
+  var updateEvents = function() {
+    $scope.day = timetable[$scope.date];
+    $scope.dayDate = $scope.date;
+    $scope.dayName = getDayName($scope.date);
+  }
+  $scope.updateEvents = updateEvents;
     
-    var next = function() {
-      $scope.date = incr_date($scope.date);
-      updateEvents();
-    }
-    $scope.next = next;
+  var nextDay = function() {
+    $scope.date = getTomorrowsDate($scope.date);
+    updateEvents();
+  }
+  $scope.nextDay = nextDay;
     
-    var prev = function() {
-      $scope.date = dec_date($scope.date);
-      updateEvents();
-    }
-    $scope.prev = prev;
+  var prevDay = function() {
+    $scope.date = getYesterdaysDate($scope.date);
+    updateEvents();
+  }
+  $scope.prevDay = prevDay;
 });

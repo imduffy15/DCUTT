@@ -1,8 +1,8 @@
 <div id="when">
-  <h2 id="day">{{dayname}}</h2>
-  <h4 id="date">({{daydate}})</h4>
+  <h2 id="day">{{dayName}}</h2>
+  <h4 id="date">({{dayDate}})</h4>
 </div>
-<ol id="timetable" dcuttswipe>
+<ol id="timetable" dcutt-swipe>
   <li id="noclass" ng-show="!day.events && !showLoader">No classes today!</li>
   <li ng-show="!showLoader" ng-repeat="event in day.events" class="{{event.type}} group module">
     <div class="duration">
@@ -18,5 +18,5 @@
     </div>
   </li>
 </ol>
-<button class="ctrl" ng-click="prev()">Previous</button>
-<button class="ctrl" ng-click="next()">Next</button>
+<button class="ctrl" ng-click="prevDay()">Previous</button>
+<button class="ctrl" ng-click="nextDay()">Next</button>
