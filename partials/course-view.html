@@ -1,13 +1,15 @@
 <ul id="timetable" dcuttswipe>
-  <li ng-show="!showLoader" id="when">
-    <h2 id="day">{{dayname}}</h2>
-    <h4 id="date">({{daydate}})</h4>
-  </li>
-  <li id="noclass" ng-show="!day.events && !showLoader">No classes today!</li>
+  <div id="topspace">
+    <li ng-show="!showLoader" id="when">
+      <h2 id="day">{{dayname}}</h2>
+      <h4 id="date">({{daydate}})</h4>
+    </li>
+  </div>
+  <li id="noclass" ng-show="!day.events && !showLoader"><span style="font-size:5em;">&#9786;</span> <br />No classes today!</li>
   <li ng-show="!showLoader" ng-repeat="event in day.events" class="{{event.type}} group module">
     <div class="duration">
       <span class="starttime">{{event.starthours}}:{{event.startmins}}</span>
-      to <span class="endtime">{{event.endhours}}:{{event.endmins}}</span>
+      | <span class="endtime">{{event.endhours}}:{{event.endmins}}</span>
     </div>
     <div class="info">
       <span class="modulecode">{{event.modulecode}}</span>
