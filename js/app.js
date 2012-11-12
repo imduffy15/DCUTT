@@ -7,8 +7,9 @@ dcutt.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
   $locationProvider.hashPrefix('!');
   $routeProvider.
     when('/', {
-      templateUrl: 'partials/prompt.html', 
-      controller: "CoursePromptCtrl"
+      redirectTo: '/CASE2'
+      //templateUrl: 'partials/prompt.html', 
+      //controller: "CoursePromptCtrl"
   }).
   when('/error', {
       templateUrl: 'partials/error.html'
