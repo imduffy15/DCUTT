@@ -6,17 +6,17 @@ dcutt.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
   $locationProvider.html5Mode(true);
   $locationProvider.hashPrefix('!');
   $routeProvider.
-    when('/', {
-      //redirectTo: '/CASE2'
-      templateUrl: 'partials/prompt.html', 
-      controller: "dcuttPromptCtrl"
+  when('/', {
+    //redirectTo: '/CASE2'
+    templateUrl: 'partials/prompt.html', 
+    controller: "dcuttPromptCtrl"
   }).
   when('/error', {
-      templateUrl: 'partials/error.html'
+    templateUrl: 'partials/error.html'
   }).
   when('/:coursecode', {
-      templateUrl: 'partials/course-view.html', 
-      controller: "dcuttViewCtrl"
+    templateUrl: 'partials/course-view.html', 
+    controller: "dcuttViewCtrl"
   });      
 }]);
 

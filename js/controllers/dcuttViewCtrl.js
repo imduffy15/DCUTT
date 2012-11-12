@@ -8,37 +8,23 @@ dcutt.controller( 'dcuttViewCtrl', function( $scope, $location, $routeParams, $h
    */
   
   var dateToString = function(date) {
-    function pad(n) {
-      return n < 10 ? '0' + n : n
-    }
-    return date.getFullYear() + "-" + pad(date.getMonth() + 1) + "-" + pad(date.getDate());
+    return moment(date).format("YYYY-MM-DD");
   }
     
   var stringToDate = function(dateString) {
-    var parts = dateString.split("-");
-    return new Date(
-      parts[0],
-      parts[1] - 1,
-      parts[2]
-    );
+    return moment(dateString, "YYYY-MM-DD");
   }
     
-  var getTomorrowsDate = function(datestr) {
-    var date = stringToDate(datestr);
-    var date = new Date(date.getTime() + 86400000);
-    return dateToString(date);
+  var getTomorrowsDate = function(dateString) {
+    return moment(dateString, "YYYY-MM-DD").add('d',1).format("YYYY-MM-DD");
   }
     
-  var getYesterdaysDate = function(datestr) {
-    var date = stringToDate(datestr);
-    var date = new Date(date.getTime() - 86400000);
-    return dateToString(date);
+  var getYesterdaysDate = function(dateString) {
+    return moment(dateString, "YYYY-MM-DD").subtract('d',1).format("YYYY-MM-DD");
   }
   
-  var getDayName = function(datestr) {
-    var name = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-    var date = stringToDate(datestr);
-    return name[date.getDay()];
+  var getDayName = function(dateString) {
+    return moment(dateString, "YYYY-MM-DD").format("dddd");
   }
   
   $scope.date = dateToString(new Date());
