@@ -1,0 +1,265 @@
+html,button,input,select,textarea
+{
+	color: #444
+}
+
+body
+{
+	font: 1em/1.4 Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-size: 1em;
+	background: #eee
+}
+
+.chromeframe
+{
+	margin: .2em 0;
+	background: #ccc;
+	color: #000;
+	padding: .2em 0
+}
+
+header[role="banner"]
+{
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 44px;
+	text-transform: uppercase;
+	-webkit-box-shadow: 0 0 8px rgba(0,0,0,.37);
+	-moz-box-shadow: 0 0 8px rgba(0,0,0,.37);
+	box-shadow: 0 0 8px rgba(0,0,0,.37);
+	border-bottom: 1px solid #9bb100;
+	background: #b9cf00
+}
+
+nav
+{
+	float: right
+}
+
+nav li
+{
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	margin: .7em .4em
+}
+
+#settings
+{
+	display: block;
+	height: 24px;
+	width: 24px;
+	background: url(../img/settings.png)
+}
+
+.pageinfo
+{
+	float: left;
+	margin: 0;
+	padding: 0
+}
+
+.pageinfo #dayName,.pageinfo #date
+{
+	float: left;
+	font: 1em/1.4 Helvetica Neue,Helvetica,Arial,sans-serif;
+	margin: .7em .2em
+}
+
+#noclass
+{
+	text-align: center;
+	border: 3px solid #dadada;
+	margin: 0 10px;
+	background: rgba(189,189,189,.19)
+}
+
+.module,.Lecture
+{
+	background: #58b7e4;
+	border: 1px solid rgba(0,0,0,.3)
+}
+
+.Practical
+{
+	background: #e75446;
+	border: 1px solid rgba(0,0,0,.3)
+}
+
+.Tutorial
+{
+	background: #eeb84d;
+	border: 1px solid rgba(0,0,0,.3)
+}
+
+.Seminar
+{
+	background: #f196d8;
+	border: 1px solid rgba(0,0,0,.3)
+}
+
+.duration
+{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center
+}
+
+.info
+{
+	padding-left: 20px;
+	display: table-cell;
+	vertical-align: middle
+}
+
+.modulecode,.location
+{
+	display: block;
+	font-size: .8em
+}
+
+.moduletitle,.starttime,.endtime
+{
+	display: block
+}
+
+#wrapper
+{
+	position: absolute;
+	z-index: 1;
+	top: 45px;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: auto
+}
+
+#scroller ol
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	padding: 0 0 30px;
+	text-align: left
+}
+
+#scroller li
+{
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	padding: 10px;
+	margin: 6px 10px 0
+}
+
+button,input,select
+{
+	-webkit-tap-highlight-color: transparent!important
+}
+
+button,input[type="button"],input[type="submit"],input[type="reset"]
+{
+	padding: 4px 12px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	font-size: .9em;
+	cursor: pointer;
+	border: 1px solid #9bb100;
+	color: #fff;
+	background: #b9cf00
+}
+
+select
+{
+	background: url(../img/dropdown.png) no-repeat right;
+	padding: 0 12px;
+	-webkit-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	border: 0 none;
+	border-bottom: solid 1px #818181;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	color: inherit;
+	background-color: transparent
+}
+
+.courseprompt
+{
+	text-align: center;
+	margin: 10px auto;
+	display: block
+}
+
+.ir
+{
+	border: 0;
+	overflow: hidden;
+	*text-indent: -9999px
+}
+
+.ir:before
+{
+	content: "";
+	display: block;
+	width: 0;
+	height: 100%
+}
+
+.hidden
+{
+	display: none!important;
+	visibility: hidden
+}
+
+.visuallyhidden
+{
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px
+}
+
+.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus
+{
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto
+}
+
+.invisible
+{
+	visibility: hidden
+}
+
+.clearfix:before,.clearfix:after
+{
+	content: " ";
+	display: table
+}
+
+.clearfix:after
+{
+	clear: both
+}
+
+.clearfix
+{
+	*zoom: 1
+}
