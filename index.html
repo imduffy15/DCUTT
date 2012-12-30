@@ -1,41 +1,50 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="dcutt">
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>DCU Timetable</title>
-        <meta name="description" content="">
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta http-equiv="cleartype" content="on">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>DCU Timetables</title>
+        <meta name="description" content="Mobile web app for accessing DCU timetables">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        
+        <meta itemprop="name" content="DCU Timetables">
+        <meta itemprop="description" content="DCU Timetables">
+        <meta itemprop="image" content="http://dcutt.com/img/icon/ios/icon-144.png">
+    
+        <meta property="og:title" content="DCU Timetables">
+        <meta property="og:description" content="DCU Timetables">
+        <meta property="og:image" content="http://dcutt.com/img/icon/ios/icon-144.png">
 
-        <meta property="og:title" content="DCU Timetable">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="http://dcutt.com">
-        <meta property="og:image" content="http://dcutt.com/img/touch/apple-touch-icon-144x144-precomposed.png">
-        <meta property="og:image:type" content="image/png">
-        <meta property="og:image:width" content="144">
-        <meta property="og:image:height" content="144">
-        <meta property="og:description" content="DCU timetable mobile app">
-
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
-        <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/icons/icon-144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/icons/icon-114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/icons/icon-72.png">
+        <link rel="apple-touch-icon-precomposed" href="img/icons/icon-57.png">
+        <link rel="shortcut icon" href="img/icons/icon-57.png">
 
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-        <link rel="stylesheet" href="css/main.css">
+        
+        <link rel="stylesheet" href="styles/adac4e4f.reset.css">
+        <link rel="stylesheet" href="styles/77f0be5b.add2home.css">
+        <link rel="stylesheet" href="styles/d6feaa96.main.css">
     </head>
-    <body>
-      <h1 id="title">Timetable</h1>
-      <div ng-view></div>
-      <script src="js/vendor/zepto.min.js"></script>
-      <script src="js/vendor/angular.js"></script>
-      <script src="js/app.js"></script>
-      <script src="js/controllers/dcuttViewCtrl.js"></script>
-      <script src="js/directives/dcuttSwipe.js"></script>
+    <body ng-app="dcuTimetablesApp">
+
+        <!--[if IE>
+            <p class="chromeframe">You are using an <strong>unsupported</strong> browser. Please change to a webkit based browser such a <a href="https://www.google.com/intl/en/chrome/browser/">Google Chrome</a></p>
+        <![endif]-->
+
+
+        <!-- Add your site or application content here -->
+        <div class="container" ng-view></div>
+
+        <script src="scripts/vendor/a08feb97.zepto.min.js"></script>
+        <script src="scripts/vendor/b8bcec9c.moment.min.js"></script>
+        <script src="scripts/vendor/4cd09f70.jstorage.min.js"></script>
+        <script src="scripts/vendor/8bb65a64.iscroll.min.js"></script>
+        <script src="scripts/vendor/120541a7.angular.min.js"></script>
+
+        <script src="scripts/785fcd8c.scripts.js"></script>
+        
+        <script src="scripts/vendor/57374d10.add2home.min.js"></script>
     </body>
 </html>
