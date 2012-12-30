@@ -21,9 +21,6 @@ dcuTimetablesApp.directive('timetable', function() {
     $('body').swipeRight(function() {
       prevDay();
     });
-    $('body').swipeRight(function() {
-      prevDay();
-    });
     $(document).keydown(function(e){
       if (e.keyCode == 39) { 
         nextDay();
