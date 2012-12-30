@@ -1,0 +1,35 @@
+<header ng-show="!showLoader" role="banner">
+  <div class="container">
+    <div class="pageinfo">
+      <h1 id="dayName">{{dayName}}</h1>
+      <h2 id="date">{{dayDate}}</h2>
+    </div>
+
+    <nav role="navigation">
+      <ul>
+        <li><a href="#!/settings" id="settings"></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div id="wrapper" timetable>
+  <div id="scroller">
+    <ol id="timetable">
+      <li id="noclass" ng-show="showLoader"><img src="img/load.gif" alt="Loading..."></li>
+      <li id="noclass" ng-show="!day.events && !showLoader">No classes today!</li>
+      <li ng-show="!showLoader" ng-repeat="event in day.events" class="{{event.type}} group module">
+        <div class="duration">
+          <span class="starttime">{{event.starthours}}:{{event.startmins}}</span>
+          <span class="ir timespace">to</span>
+          <span class="endtime">{{event.endhours}}:{{event.endmins}}</span>
+        </div>
+        <div class="info">
+          <span class="modulecode">{{event.modulecode}} {{event.type}}</span>
+          <span class="moduletitle" ng-bind-html-unsafe="event.title"></span>
+          <span class="location">Location: {{event.location}}</span>
+        </div>
+      </li>
+    </ol>
+  </div>
+</div>
