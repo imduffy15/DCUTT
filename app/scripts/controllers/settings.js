@@ -1,4 +1,8 @@
-dcuTimetablesApp.controller('SettingsCtrl',['$location', function($location) {
-    $.jStorage.flush();
-    $location.path("/");
-}]);
+dcuTimetablesApp.controller('SettingsCtrl',
+  ['$location',
+    function($location) {
+      storage.clear();
+      $location.path('');
+    }
+  ]
+);
