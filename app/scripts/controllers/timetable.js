@@ -47,7 +47,7 @@ function($scope, $location, $routeParams, $http) {
           $scope.showLoader = false;
       }).
       error(function(data) {
-        $location.path('error');
+        if(!cached) $location.path('error');
       });
     }
 }]);
