@@ -45,10 +45,9 @@ function($scope, $location, $routeParams, $http) {
           timetable = data;
           updateEvents();
           $scope.showLoader = false;
-          console.log("success");
       }).
       error(function(data) {
-        $location.path('error');
+        if(!cached) $location.path('error');
       });
     }
 }]);

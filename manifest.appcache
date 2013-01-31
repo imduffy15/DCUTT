@@ -29,7 +29,8 @@ views/credits.html
 views/main.html
 views/settings.html
 views/timetable.html
-scripts/c42410a4.scripts.js
+views/error.html
+scripts/423dae9b.scripts.js
 scripts/vendor/120541a7.angular.min.js
 scripts/vendor/8bb65a64.iscroll.min.js
 scripts/vendor/a08feb97.zepto.min.js
