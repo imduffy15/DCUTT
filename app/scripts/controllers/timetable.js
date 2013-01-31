@@ -27,27 +27,28 @@ function($scope, $location, $routeParams, $http) {
     };
     $scope.prevDay = prevDay;
 
-    if ((Math.round(new Date().getTime() / 1000) - cached) < 86400) {
-        timetable = JSON.parse(storage.getItem('timetable'));
-        updateEvents();
-        $scope.showLoader = false;
-    } else {
-        $http({
-            method: 'JSONP',
-            url: 'http://api.dcutt.com/index.php?callback=JSON_CALLBACK' +
-                 '&coursecode=' + $routeParams.coursecode
-        }
-             ).
-        success(function(data) {
-            storage.setItem('timetable', JSON.stringify(data));
-            storage.setItem('timetable-cached',
-                            (Math.round(new Date().getTime() / 1000)));
-            timetable = data;
-            updateEvents();
-            $scope.showLoader = false;
-        }).
-        error(function(data) {
-            $location.path('error');
-        });
+    if(cached) {
+      timetable = JSON.parse(storage.getItem('timetable'));
+      updateEvents();
+      $scope.showLoader = false;
+    }
+
+    if ((Math.round(new Date().getTime() / 1000) - cached) > 86400) {
+      $http.jsonp(
+        'http://api.dcutt.com/index.php?callback=JSON_CALLBACK&coursecode=' + $routeParams.coursecode,
+        {timeout:500}
+      ).
+      success(function(data) {
+          storage.setItem('timetable', JSON.stringify(data));
+          storage.setItem('timetable-cached',
+                          (Math.round(new Date().getTime() / 1000)));
+          timetable = data;
+          updateEvents();
+          $scope.showLoader = false;
+          console.log("success");
+      }).
+      error(function(data) {
+        $location.path('error');
+      });
     }
 }]);
