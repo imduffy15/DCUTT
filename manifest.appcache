@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# Time: Mon Dec 31 2012 21:45:24 GMT+0000 (GMT)
+# Time: Thu Jan 31 2013 04:33:18 GMT+0000 (GMT)
 # This manifest was created by confess.js, http://github.com/jamesgpearce/confess
 #
 # Retrieved URL: http://localhost:3501/#!/
@@ -29,13 +29,13 @@ views/credits.html
 views/main.html
 views/settings.html
 views/timetable.html
-scripts/0d367a6f.scripts.js
+scripts/c42410a4.scripts.js
 scripts/vendor/120541a7.angular.min.js
 scripts/vendor/8bb65a64.iscroll.min.js
 scripts/vendor/a08feb97.zepto.min.js
 scripts/vendor/b8bcec9c.moment.min.js
+styles/60d317b5.main.css
 styles/adac4e4f.reset.css
-styles/d6feaa96.main.css
 
 NETWORK:
 *
