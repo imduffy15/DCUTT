@@ -1,52 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>DCU Timetables</title>
-        <meta name="description" content="Mobile web app for accessing DCU timetables">
-        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<html xmlns:ng="http://angularjs.org" lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>DCU Timetables</title>
+      <meta name="description" content="Mobile web app for accessing DCU timetables">
+      <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
         
-        <meta itemprop="name" content="DCU Timetables">
-        <meta itemprop="description" content="DCU Timetables">
-        <meta itemprop="image" content="http://dcutt.com/img/icon/ios/icon-144.png">
+      <meta itemprop="name" content="DCU Timetables">
+      <meta itemprop="description" content="DCU Timetables">
+      <meta itemprop="image" content="http://dcutt.com/img/icon/ios/icon-144.png">
     
-        <meta property="og:title" content="DCU Timetables">
-        <meta property="og:description" content="DCU Timetables">
-        <meta property="og:image" content="http://dcutt.com/img/icon/ios/icon-144.png">
+      <meta property="og:title" content="DCU Timetables">
+      <meta property="og:description" content="DCU Timetables">
+      <meta property="og:image" content="http://dcutt.com/img/icon/ios/icon-144.png">
 
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/icons/icon-144.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/icons/icon-114.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/icons/icon-72.png">
-        <link rel="apple-touch-icon-precomposed" href="img/icons/icon-57.png">
-        <link rel="shortcut icon" href="img/icons/icon-57.png">
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/icons/icon-144.png">
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/icons/icon-114.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/icons/icon-72.png">
+      <link rel="apple-touch-icon-precomposed" href="img/icons/icon-57.png">
+      <link rel="shortcut icon" href="img/icons/icon-57.png">
 
-        <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      
+      <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body id="ng-app" ng-app="dcuTimetablesApp">
+      <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+      <![endif]-->
         
-        <link rel="stylesheet" href="styles/reset.css">
-        <link rel="stylesheet" href="styles/main.css">
-    </head>
-    <body ng-app="dcuTimetablesApp">
-
-        <!--[if IE>
-            <p class="chromeframe">You are using an <strong>unsupported</strong> browser. Please change to a webkit based browser such a <a href="https://www.google.com/intl/en/chrome/browser/">Google Chrome</a></p>
-        <![endif]-->
-
-
-        <!-- Add your site or application content here -->
-        <div class="container" ng-view></div>
-
-        <script src="scripts/vendor/zepto.min.js"></script>
-        <script src="scripts/vendor/moment.min.js"></script>
-        <script src="scripts/vendor/iscroll.min.js"></script>
-        <script src="scripts/vendor/angular.min.js"></script>
-
-        <!-- build:js scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/timetable.js"></script>
-        <script src="scripts/controllers/settings.js"></script>
-        <script src="scripts/directives/timetable.js"></script>
-        <!-- endbuild -->
-    </body>
+      <!--[if lt IE 9]>
+        <script>
+          document.createElement('ng-include');
+          document.createElement('ng-pluralize');
+          document.createElement('ng-view');
+          document.createElement('ng:include');
+          document.createElement('ng:pluralize');
+          document.createElement('ng:view');
+        </script>
+        <script src="scripts/vendor/html5shim.min.js"></script>
+        <script src="scripts/vendor/es5-shim.min.js"></script>
+        <script src="scripts/vendor/json3.min.js"></script>
+      <![endif]-->
+      
+      <div ng-view>
+      </div>
+      
+      <script src="scripts/vendor/angular.min.js"></script>
+      <script src="scripts/vendor/zepto.min.js"></script>
+      <script src="scripts/vendor/moment.min.js"></script>
+      <script src="scripts/vendor/iscroll.min.js"></script>
+      <script src="scripts/vendor/fastclick.min.js"></script>
+      
+      <!-- build:js scripts/scripts.js -->
+      <script src="scripts/app.js"></script>
+      <script src="scripts/controllers/main.js"></script>
+      <script src="scripts/controllers/timetable.js"></script>
+      <script src="scripts/controllers/settings.js"></script>
+      <script src="scripts/directives/timetable.js"></script>
+      <!-- endbuild -->
+  </body>
 </html>
