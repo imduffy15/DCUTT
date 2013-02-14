@@ -30,7 +30,6 @@ function($scope, $location, $routeParams, $http) {
     $scope.prevDay = prevDay;
 
     var updateScrolling = function() {
-      console.log("Refreshing iscroll");
       myScroll.refresh();
     }
 
