@@ -30,13 +30,13 @@ views/main.html
 views/settings.html
 views/timetable.html
 views/error.html
-scripts/423dae9b.scripts.js
+scripts/9f35c73c.scripts.js
+scripts/vendor/08a45634.fastclick.min.js
 scripts/vendor/120541a7.angular.min.js
 scripts/vendor/8bb65a64.iscroll.min.js
 scripts/vendor/a08feb97.zepto.min.js
 scripts/vendor/b8bcec9c.moment.min.js
-styles/60d317b5.main.css
-styles/adac4e4f.reset.css
+styles/f48685cd.main.css
 
 NETWORK:
 *
