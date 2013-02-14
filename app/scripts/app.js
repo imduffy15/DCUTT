@@ -1,11 +1,3 @@
-document.addEventListener(
-  'touchmove',
-  function(e) {
-    e.preventDefault();
-  },
-  false
-);
-
 var storage = window.localStorage;
 
 var dcuTimetablesApp = angular.module('dcuTimetablesApp', [])

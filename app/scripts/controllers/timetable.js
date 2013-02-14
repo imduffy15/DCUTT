@@ -5,11 +5,13 @@ function($scope, $location, $routeParams, $http) {
     $scope.date = moment().format('YYYY-MM-DD');
     var timetable = {};
     var cached = storage.getItem('timetable-cached');
-
+    var myScroll = new iScroll('wrapper', { hScrollbar: false, vScrollbar: true, bounce: false, fadeScrollbar: true});
+    
     var updateEvents = function() {
         $scope.day = timetable[$scope.date];
         $scope.dayDate = moment($scope.date, 'YYYY-MM-DD').format('DD-MM-YYYY');
         $scope.dayName = moment($scope.date, 'YYYY-MM-DD').format('dddd');
+        setTimeout(updateScrolling,300);
     };
     $scope.updateEvents = updateEvents;
 
@@ -26,6 +28,11 @@ function($scope, $location, $routeParams, $http) {
         updateEvents();
     };
     $scope.prevDay = prevDay;
+
+    var updateScrolling = function() {
+      console.log("Refreshing iscroll");
+      myScroll.refresh();
+    }
 
     if(cached) {
       timetable = JSON.parse(storage.getItem('timetable'));
