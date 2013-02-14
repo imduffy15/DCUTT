@@ -53,7 +53,10 @@ function($scope, $location, $routeParams, $http) {
           $scope.showLoader = false;
       }).
       error(function(data) {
-        if(!cached) $location.path('error');
+        if(!cached) {
+          alert("Error processing your request!");
+          $location.path('settings');
+        }
       });
     }
 }]);
