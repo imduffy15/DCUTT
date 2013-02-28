@@ -1,0 +1,10 @@
+{
+  "name": "DCU Timetables",
+  "description": "DCUTT.COM supplies a mobile frontend for accessing DCU timetables",
+  "launch_url": "index.html",
+  "launch_container": "panel",
+  "icons": {
+    "128": "img/icons/icon-144.png"
+  },
+  "permissions": []
+}
