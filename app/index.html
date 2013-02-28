@@ -78,7 +78,7 @@
                 var text = this.responseText;
                 if (!text) return;
                 var version = (text.match(/# Time: (.*)/))[1];
-                if (version) _gaq.push(['_trackEvent', 'Appcache', 'Version', version.replace(/\s/g, '_'));
+                if (version) _gaq.push(['_trackEvent', 'Appcache', 'Version', version.replace(/\s/g, '_')]);
               };
               r.send();
             }, 1000);
