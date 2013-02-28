@@ -4,12 +4,12 @@ dcuTimetablesApp.controller('MainCtrl',
 
       var coursecode = storage.getItem('coursecode') || false;
 
-      if (coursecode) {
+      if (coursecode && coursecode != undefin) {
           $location.path(coursecode);
       }
 
       $scope.getTimetable = function() {
-          if ($scope.coursecode !== null) {
+          if (!(typeof $scope.coursecode === "undefined")) {
               storage.setItem('coursecode', $scope.coursecode);
               $location.path($scope.coursecode);
           }
