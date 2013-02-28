@@ -1,0 +1,10 @@
+{
+  "name": "DCU Timetables",
+  "description": "A nicely formatted timetable for DCU students",
+  "launch_url": "index.html",
+  "launch_container": "panel",
+  "icons": {
+    "128": "img/icons/icon-144.png"
+  },
+  "permissions": []
+}
