@@ -9,11 +9,11 @@
         
       <meta itemprop="name" content="DCU Timetables">
       <meta itemprop="description" content="DCU Timetables">
-      <meta itemprop="image" content="http://dcutt.com/img/icon/ios/icon-144.png">
+      <meta itemprop="image" content="http://dcutt.com/img/icons/icon-144.png">
     
       <meta property="og:title" content="DCU Timetables">
       <meta property="og:description" content="DCU Timetables">
-      <meta property="og:image" content="http://dcutt.com/img/icon/ios/icon-144.png">
+      <meta property="og:image" content="http://dcutt.com/img/icons/icon-144.png">
 
       <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/icons/icon-144.png">
       <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/icons/icon-114.png">
@@ -25,25 +25,7 @@
       
       <link rel="stylesheet" href="styles/main.css">
   </head>
-  <body id="ng-app" ng-app="dcuTimetablesApp">
-      <!--[if lt IE 7]>
-        <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-      <![endif]-->
-        
-      <!--[if lt IE 9]>
-        <script>
-          document.createElement('ng-include');
-          document.createElement('ng-pluralize');
-          document.createElement('ng-view');
-          document.createElement('ng:include');
-          document.createElement('ng:pluralize');
-          document.createElement('ng:view');
-        </script>
-        <script src="scripts/vendor/html5shim.min.js"></script>
-        <script src="scripts/vendor/es5-shim.min.js"></script>
-        <script src="scripts/vendor/json3.min.js"></script>
-      <![endif]-->
-      
+  <body id="ng-app" ng-app="dcuTimetablesApp">      
       <div ng-view>
       </div>
       
@@ -59,6 +41,7 @@
       <script src="scripts/controllers/timetable.js"></script>
       <script src="scripts/controllers/settings.js"></script>
       <script src="scripts/directives/timetable.js"></script>
+			<script src="scripts/directives/error.js"></script>
       <!-- endbuild -->
   </body>
 </html>
