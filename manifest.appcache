@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# Time: Thu Feb 28 2013 14:57:21 GMT+0000 (GMT)
+# Time: Thu Feb 28 2013 15:03:58 GMT+0000 (GMT)
 # This manifest was created by confess.js, http://github.com/jamesgpearce/confess
 #
 # Retrieved URL: http://localhost:3501/#!/
@@ -21,7 +21,6 @@ CACHE MANIFEST
 #  configFile: /usr/local/share/npm/lib/node_modules/yeoman/lib/support/confess.json
 
 CACHE:
-CACHE:
 img/dropdown.png
 img/settings.png
 img/load.gif
@@ -30,7 +29,7 @@ views/credits.html
 views/main.html
 views/settings.html
 views/timetable.html
-scripts/121ca510.scripts.js
+scripts/f82d8aad.scripts.js
 scripts/vendor/08a45634.fastclick.min.js
 scripts/vendor/120541a7.angular.min.js
 scripts/vendor/8bb65a64.iscroll.min.js
