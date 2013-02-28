@@ -19,6 +19,7 @@ var dcuTimetablesApp = angular.module('dcuTimetablesApp', [])
           templateUrl: 'views/credits.html'
         })
         .when('/error', {
+					templateUrl: 'views/settings.html',
           controller: 'ErrorCtrl'
         })
         .when('/:coursecode', {
