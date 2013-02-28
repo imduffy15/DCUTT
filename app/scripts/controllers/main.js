@@ -4,7 +4,7 @@ dcuTimetablesApp.controller('MainCtrl',
 
       var coursecode = storage.getItem('coursecode') || false;
 
-      if (coursecode && coursecode != undefin) {
+      if (coursecode) {
           $location.path(coursecode);
       }
 
