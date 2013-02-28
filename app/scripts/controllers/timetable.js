@@ -6,7 +6,8 @@ function($scope, $location, $routeParams, $http) {
     var timetable = {};
     var cached = storage.getItem('timetable-cached');
     var myScroll = new iScroll('wrapper', { hScrollbar: false, vScrollbar: true, bounce: false, fadeScrollbar: true});
-    
+    var api = "://api.dcutt.com/index.php?callback=JSON_CALLBACK&coursecode=";
+		
     var updateEvents = function() {
         $scope.day = timetable[$scope.date];
         $scope.dayDate = moment($scope.date, 'YYYY-MM-DD').format('DD-MM-YYYY');
@@ -39,9 +40,15 @@ function($scope, $location, $routeParams, $http) {
       $scope.showLoader = false;
     }
 
+		if(window.location.protocol == 'https:') {
+			api = 'https' + api;
+		} else {
+			api = 'http' + api;
+		}
+
     if ((Math.round(new Date().getTime() / 1000) - cached) > 86400) {
       $http.jsonp(
-        'http://api.dcutt.com/index.php?callback=JSON_CALLBACK&coursecode=' + $routeParams.coursecode,
+        api + $routeParams.coursecode,
         {timeout:500}
       ).
       success(function(data) {
