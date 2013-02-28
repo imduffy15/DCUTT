@@ -1,6 +1,6 @@
 {
   "name": "DCU Timetables",
-  "description": "A nicely formatted timetable for DCU students",
+  "description": "DCUTT.COM supplies a mobile frontend for accessing DCU timetables",
   "launch_url": "index.html",
   "launch_container": "panel",
   "icons": {
