@@ -15,8 +15,8 @@ var dcuTimetablesApp = angular.module('dcuTimetablesApp', [])
           templateUrl: 'views/settings.html',
           controller: 'SettingsCtrl'
         })
-        .when('/credits', {
-          templateUrl: 'views/credits.html'
+        .when('/about', {
+          templateUrl: 'views/about.html'
         })
         .when('/error', {
 					templateUrl: 'views/settings.html',

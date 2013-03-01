@@ -35,9 +35,14 @@ text-transform: uppercase;
 
 #dayName, #date
 {
-	float: left;
+  text-align:center;
 	font: 1em/1.4 Helvetica Neue,Helvetica,Arial,sans-serif;
-	margin: .3em .2em
+	margin: 0em .2em
+}
+
+#title {
+  text-align:center;
+  font: 1.5em/.2 Helvetica Neue,Helvetica,Arial,sans-serif
 }
 
 nav [class^="button-"], nav [class*=" button-"] {
@@ -71,6 +76,28 @@ nav button {
   width: 24px;
   height: 24px;
   background: url(../img/settings.png) no-repeat;
+  background-size: 24px 24px;
+  vertical-align: text-bottom;
+  overflow: hidden;
+  text-indent: -999px;
+}
+
+.icon-about {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../img/about.png) no-repeat;
+  background-size: 24px 24px;
+  vertical-align: text-bottom;
+  overflow: hidden;
+  text-indent: -999px;
+}
+
+.icon-home {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../img/home.png) no-repeat;
   background-size: 24px 24px;
   vertical-align: text-bottom;
   overflow: hidden;
