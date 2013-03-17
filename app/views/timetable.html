@@ -10,10 +10,10 @@
 <div id="wrapper" role="main" timetable>
   <div id="scroller">
     <div class="content">
-      <ol id="timetable">
-        <li id="noclass" ng-show="showLoader"><img src="img/load.gif" alt="Loading..."></li>
-        <li id="noclass" ng-show="!day.events && !showLoader">No classes today!</li>
-        <li ng-show="!showLoader" ng-repeat="event in day.events" class="{{event.type}} group module">
+      <ol id="timetable" tabindex="0" role="listbox">
+        <li id="noclass" ng-show="showLoader" tabindex="-1" role="option"><img src="img/load.gif" alt="Loading..."></li>
+        <li id="noclass" ng-show="!day.events && !showLoader" tabindex="-1" role="option">No classes today!</li>
+        <li ng-show="!showLoader" ng-repeat="event in day.events" class="{{event.type}} group module" tabindex="-1" role="option">
           <div class="duration">
             <span class="starttime">{{event.starthours}}:{{event.startmins}}</span>
             <span class="ir timespace">to</span>
