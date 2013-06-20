@@ -1,3 +1,6 @@
+// Copyright (c) 2012 Ian Duffy & Ben Chapman
+// All rights reversed
+
 var storage = window.localStorage;
 
 var dcuTimetablesApp = angular.module('dcuTimetablesApp', [])

@@ -1,3 +1,6 @@
+// Copyright (c) 2012 Ian Duffy & Ben Chapman
+// All rights reversed
+
 dcuTimetablesApp.directive('timetable', function() {
   return function (scope, element, attrs) {
     var nextDay = function() {

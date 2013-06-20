@@ -1,3 +1,6 @@
+// Copyright (c) 2012 Ian Duffy & Ben Chapman
+// All rights reversed
+
 dcuTimetablesApp.controller('TimetableCtrl',
                             ['$scope', '$location', '$routeParams', '$http',
 function($scope, $location, $routeParams, $http) {
